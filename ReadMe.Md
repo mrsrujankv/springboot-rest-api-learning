@@ -25,3 +25,12 @@
 | Feign       | `ExternalUserClient`     | Calls external API             |
 | Config      | `SwaggerConfig`          | Swagger UI setup               |
 | Exception   | `GlobalExceptionHandler` | Centralized error handling     |
+
+
+### Create a New User
+Try this POST call to create a user:
+```shell
+curl -X POST http://localhost:8080/api/users \
+  -H "Content-Type: application/json" \
+  -d '{"name": "Alice", "email": "alice@example.com"}'
+```

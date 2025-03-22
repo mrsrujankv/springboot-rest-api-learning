@@ -1,0 +1,10 @@
+services:
+  userservice:
+    build: .
+    ports:
+      - "8081:8080"
+    volumes:
+      - user_db_data:/data
+
+volumes:
+  user_db_data:
