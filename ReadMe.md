@@ -170,15 +170,3 @@ src
 │   └── resources
 ├── test
 ```
-
----
-
-## 📜 License
-
-MIT
-
----
-
-## 👨‍💻 Author
-
-Srujan Kumar
