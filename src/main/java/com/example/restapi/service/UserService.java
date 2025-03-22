@@ -2,15 +2,17 @@ package com.example.restapi.service;
 
 import com.example.restapi.model.User;
 import com.example.restapi.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor // Auto-generates constructor for final fields
 public class UserService {
-    @Autowired
-    private UserRepository userRepository;
+
+    private final UserRepository userRepository;
 
     public List<User> getAllUsers() {
         return userRepository.findAll();
