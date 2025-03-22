@@ -22,7 +22,7 @@ public class UserService {
     private final UserRepository userRepository;
 
     // Constructor-based dependency injection for UserRepository
-    public UserService(UserRepository(userRepository) {
+    public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 

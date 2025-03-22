@@ -20,11 +20,12 @@ public class GlobalExceptionHandler {
      * @param ex The exception thrown when validation fails
      * @return A ResponseEntity containing the error message and HTTP status code
      */
+    @SuppressWarnings("null")
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorResponse> handleValidationErrors(MethodArgumentNotValidException ex) {
         // Extract the first validation error message, with a null check
         String errorMessage = ex.getBindingResult().getFieldError() != null
-                ? ex.getBindingResult().getFieldError().getDefaultMessage()
+                ? (ex.getBindingResult().getFieldError() != null ? ex.getBindingResult().getFieldError().getDefaultMessage() : "Validation error occurred")
                 : "Validation error occurred";
 
         // Create a structured error response
