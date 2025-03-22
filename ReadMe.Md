@@ -2,6 +2,7 @@
 
 - Start your app - 
   ```shell 
+  ./gradlew clean build
   ./gradlew bootRun
   ```
 - Try calling:
