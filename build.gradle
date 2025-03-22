@@ -4,7 +4,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.1.4'
 }
 
-group = 'com.example'
+group = 'com.srujan'
 version = '0.0.1-SNAPSHOT'
 
 java {
@@ -30,29 +30,30 @@ dependencyManagement {
 }
 
 dependencies {
-	// Spring Web & JPA
+	// Spring Boot Starter Modules
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 
-	// Lombok
+	// Lombok for boilerplate reduction
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testCompileOnly 'org.projectlombok:lombok'
 	testAnnotationProcessor 'org.projectlombok:lombok'
 
-	// OpenFeign
+	// Feign Client for REST communication
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 
-	// Swagger/OpenAPI
+	// Swagger/OpenAPI documentation
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.4'
 
-	// In-memory DB for dev
+	// In-memory H2 DB for development/testing
 	runtimeOnly 'com.h2database:h2'
 
-	// Optional: MySQL driver
-	runtimeOnly 'com.mysql:mysql-connector-j'
+	// Optional: MySQL (uncomment if used)
+	// runtimeOnly 'com.mysql:mysql-connector-j'
 
-	// Dev tools
+	// Developer tools (hot reload)
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
 	// Testing

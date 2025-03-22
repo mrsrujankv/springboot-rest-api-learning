@@ -1,18 +1,20 @@
-package com.example.restapi.model;
+package com.srujan.userservice.model;
 
 import jakarta.persistence.*;
 import lombok.*;
 
+/**
+ * JPA Entity representing the 'users' table.
+ */
 @Entity
 @Table(name = "users")
-@Data // Includes @Getter, @Setter, @ToString, @EqualsAndHashCode, @RequiredArgsConstructor
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
     private String email;
 }
